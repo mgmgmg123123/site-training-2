@@ -1,0 +1,28 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type NavItem = {
+  name: string;
+  path: string;
+};
+
+type Props = HTMLAttributes<"nav"> & {
+  nav: Array<NavItem>;
+};
+
+const { nav, ...props } = Astro.props;
+---
+
+<nav class="l-globalNav" {...props}>
+  <ul class="l-globalNav__list">
+    {
+      nav.map(({ name, path }) => (
+        <li class="l-globalNav__item">
+          <a href={path} class="l-globalNav__link">
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

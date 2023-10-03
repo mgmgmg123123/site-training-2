@@ -1,0 +1,28 @@
+@charset "utf-8";
+@use "../global" as *;
+
+.l-globalNav {
+  .l-globalNav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    @include md {
+      column-gap: 80px;
+    }
+  }
+  .l-globalNav__link {
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    @include md {
+      font-size: 18px;
+    }
+    transition: opacity 0.25s;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+}

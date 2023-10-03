@@ -1,0 +1,33 @@
+---
+import "@/assets/styles/style.scss";
+import Logo from "@/components/Logo.astro";
+import GlobalNav from "../layouts/GlobalNav.astro";
+const nav = [
+  {
+    name: "ホーム",
+    path: "/",
+  },
+  {
+    name: "メッセージ",
+    path: "/message",
+  },
+  {
+    name: "企業概要",
+    path: "/",
+  },
+];
+---
+
+<header class="l-header">
+  <div class="l-header__inner">
+    <div class="l-header__logo" title="トップページへ戻る">
+      <a href="/" class="l-header__logoLink">
+        <Logo color="#222" width="100" height="80" />
+      </a>
+      <h1 class="l-header__h1">ロゴ</h1>
+    </div>
+    <div class="globalNavWrap">
+      <GlobalNav nav={nav} />
+    </div>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+---
+import "@/assets/styles/components/_link.scss"
+
+interface Props {
+	text: string;
+	href: string;
+}
+
+const { href,text} = Astro.props;
+---
+
+<a href={href} class="link">
+	<span class="link__text">{text}</span>
+</a>

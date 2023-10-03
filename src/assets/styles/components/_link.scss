@@ -1,0 +1,37 @@
+@charset "utf-8";
+@use "../global" as *;
+.link {
+  padding: 15px 20px;
+  border: 1px solid $color_primary;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  transition: opacity 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include hover {
+    opacity: 0.5;
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    content: "";
+    transform: translateY(-50%);
+    background-image: url("/src//assets/img/icon_arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+    width: 5px;
+    height: 9px;
+  }
+  .link__text {
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 14px;
+    color: $color_primary;
+    text-align: center;
+  }
+}

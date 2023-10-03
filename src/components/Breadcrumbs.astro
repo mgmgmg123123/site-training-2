@@ -1,0 +1,37 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Breadcrumb = {
+  name: string;
+  path: string;
+};
+
+type Props = HTMLAttributes<"nav"> & {
+  breadcrumbs: Array<Breadcrumb>;
+};
+
+const { breadcrumbs, ...props } = Astro.props;
+---
+
+<nav class="c-breadcrumbs" {...props}>
+  <ul class="c-breadcrumbs__list">
+    {
+      breadcrumbs.map(({ name, path }, index) => {
+        <li class="c-breadcrumbs__item">
+          {
+            // パンクズの最後の要素であれば現在位置となる
+            index === breadcrumbs.length - 1 ? (
+              <a href="" aria-current="page" class="c-breadcrumbs__link">
+                {name}
+              </a>
+            ) : (
+              <a href={path} class="c-breadcrumbs__link">
+                {name}
+              </a>
+            )
+          }
+        </li>;
+      })
+    }
+  </ul>
+</nav>

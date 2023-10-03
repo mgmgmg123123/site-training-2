@@ -1,0 +1,7 @@
+@charset "utf-8";
+@use "sass:math";
+
+@mixin font_sans {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+}

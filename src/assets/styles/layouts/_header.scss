@@ -1,0 +1,35 @@
+@charset "utf-8";
+@use "../global" as *;
+.l-header {
+  height: $header_height_sp;
+  @include md {
+    height: $header_height;
+  }
+  .l-header__h1 {
+    @include visually_hidden;
+  }
+  .l-header__inner {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .l-header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .l-header__logoLink {
+    width: fit-content;
+    display: block;
+    cursor: pointer;
+    svg {
+      display: block;
+      width: 160px;
+      @include md {
+        width: 280px;
+      }
+    }
+  }
+}

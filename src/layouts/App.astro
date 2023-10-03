@@ -1,0 +1,17 @@
+---
+import Document from "./Document.astro"
+import Footer from "./Footer.astro"
+import Header from "./Header.astro"
+
+
+const props = Astro.props
+---
+
+<Document {...props}>
+  <Header />
+  <main id="start-of-content" class="main">
+    
+    <slot />
+  </main>
+  <Footer />
+</Document>

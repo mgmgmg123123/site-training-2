@@ -1,0 +1,43 @@
+@charset "utf-8";
+@use "sass:math";
+@use "variables";
+
+@mixin visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  border: 0;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+@mixin md {
+  @media screen and (min-width: variables.$md) {
+    @content;
+  }
+}
+@mixin under_md {
+  @media screen and (max-width: variables.$md) {
+    @content;
+  }
+}
+@mixin line_clamp_single {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin line_clamp($count) {
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,229 @@
+@charset "utf-8";
+@use "../global" as *;
+
+.kv {
+  position: relative;
+  max-width: 100%;
+  .kv__inner {
+    height: calc(100vh - $header_height_sp);
+    // height: 340px;
+    @include md {
+      height: calc(100vh - $header_height);
+      // height: 590px;
+    }
+  }
+  .kv__background {
+    position: absolute;
+    aspect-ratio: 1980/811;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    @include md {
+      aspect-ratio: 1980/811;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      inset: 0;
+    }
+  }
+}
+.globalNavWrap {
+  display: flex;
+  align-items: center;
+  @include md {
+    margin-top: 10px;
+  }
+}
+.wrapper {
+  padding: 41px 20px 50px;
+  @include md {
+    padding-inline: 40px;
+    margin-top: 22px;
+  }
+}
+
+.hoge {
+  .hoge__inner {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    @include md {
+      max-width: 1110px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+  .hoge__imgWrap {
+    aspect-ratio: 335/339;
+    width: 100%;
+    height: auto;
+    @include md {
+      aspect-ratio: 555/547;
+    }
+    .hoge__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      pointer-events: none;
+      inset: 0;
+    }
+  }
+  .hoge__textWrap {
+    @include font_sans;
+    @include md {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    .hoge__textInner {
+      padding: 27px 20px;
+      @include md {
+        padding: 40px;
+      }
+    }
+    .hoge__subTitle {
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 15px;
+      color: $color_text;
+      letter-spacing: 0.2em;
+      @include md {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .hoge__title {
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 26px;
+      color: $color_primary;
+      margin-top: 18px;
+      letter-spacing: 0.1em;
+      @include md {
+        font-size: 32px;
+        margin-top: 25px;
+      }
+    }
+    .hoge__text {
+      line-height: calc(27 / 15);
+      font-weight: 400;
+      font-size: 15px;
+      color: $color_text;
+      margin-top: 19px;
+      letter-spacing: 0.1em;
+      @include md {
+        font-size: 16px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.hoge2 {
+  margin-top: 37px;
+  @include md {
+    margin-top: 97px;
+  }
+  .hoge2__subTitle {
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 12px;
+    color: $color_text;
+    text-align: center;
+    margin-top: 5px;
+    @include md {
+      font-size: 16px;
+    }
+  }
+  .hoge2__title {
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 30px;
+    color: $color_primary;
+    margin-top: 20px;
+    text-align: center;
+
+    @include md {
+      font-size: 32px;
+      margin-top: 25px;
+    }
+  }
+  .hoge2__list {
+    margin-top: 27px;
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    @include md {
+      max-width: 1110px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+  .hoge2__item {
+    width: 100%;
+  }
+  .hoge2__link {
+    transition: opacity 0.5s;
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+  .hoge2__imgWrap {
+    aspect-ratio: 335/172;
+    width: 100%;
+    height: auto;
+  }
+  .hoge2__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .hoge2__heading {
+    line-height: calc(24 / 15);
+    font-weight: 600;
+    font-size: 15px;
+    color: $color_text;
+    margin-top: 10px;
+    @include line_clamp(2);
+    @include md {
+      margin-top: 16px;
+    }
+  }
+  .hoge2__datetime {
+    display: block;
+    line-height: calc(16 / 12);
+    font-weight: 400;
+    font-size: 12px;
+    color: $color_text;
+    letter-spacing: 0.05em;
+    @include md {
+      margin-top: 3px;
+    }
+  }
+  .hoge2__linkWrap {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    @include line_clamp_single;
+    @include md {
+      max-width: 220px;
+      margin-top: 31px;
+    }
+    &:focus-visible {
+      outline: 1px;
+    }
+  }
+}
