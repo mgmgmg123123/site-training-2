@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export type Props = HTMLAttributes<"button">;
+
+const { ...props } = Astro.props;
+---
+
+<button
+  type="button"
+  id="js-hamburger"
+  class="hamburger"
+  aria-label="メニューを表示する"
+  aria-controls="js-hamburger-menu"
+  aria-expanded="false"
+  {...props}
+>
+  <span class="hamburger__line"></span>
+</button>

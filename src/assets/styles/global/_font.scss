@@ -5,3 +5,29 @@
   font-family: "Noto Sans", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
 }
+
+// Webフォント
+@mixin font_serif {
+  font-family: "Open Sans", "Noto Sans JP", sans-serif;
+  @include font_weight_regular;
+}
+
+@mixin font_weight_light {
+  font-weight: 300;
+}
+
+@mixin font_weight_regular {
+  font-weight: 400;
+}
+
+@mixin font_weight_medium {
+  font-weight: 500;
+}
+
+@mixin font_weight_semiBold {
+  font-weight: 600;
+}
+
+@mixin font_weight_bold {
+  font-weight: 700;
+}

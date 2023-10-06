@@ -4,9 +4,32 @@
 .kv {
   position: relative;
   max-width: 100%;
+  .kv__title {
+    color: $color_white;
+    .kv__titleText {
+      @include font_weight_bold;
+      line-height: 1.2;
+      font-size: 80px;
+      text-transform: uppercase;
+      @include md {
+        font-size: 160px;
+      }
+    }
+    .kv__titleMessage {
+      line-height: 1.2;
+      font-size: 20px;
+      text-align: center;
+      @include md {
+        font-size: 24px;
+      }
+    }
+  }
   .kv__inner {
     height: calc(100vh - $header_height_sp);
     // height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include md {
       height: calc(100vh - $header_height);
       // height: 590px;

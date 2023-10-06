@@ -9,10 +9,13 @@
     @include visually_hidden;
   }
   .l-header__inner {
-    padding: 20px;
     height: 100%;
     display: flex;
+    padding-left: 20px;
     justify-content: space-between;
+    @include md {
+      padding: 20px;
+    }
   }
   .l-header__logo {
     display: flex;

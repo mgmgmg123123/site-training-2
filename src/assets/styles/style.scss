@@ -2,5 +2,7 @@
 @use "layouts/footer";
 @use "layouts/globalNav";
 @use "layouts/header";
+@use "components/hamburger";
+@use "components/link";
 
 @import "node_modules/destyle.css";

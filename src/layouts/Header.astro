@@ -1,7 +1,8 @@
 ---
-import "@/assets/styles/style.scss";
+// import "@/assets/styles/style.scss";
 import Logo from "@/components/Logo.astro";
 import GlobalNav from "../layouts/GlobalNav.astro";
+import ButtonHamburger from "@/components/ButtonHamburger.astro";
 const nav = [
   {
     name: "ホーム",
@@ -26,8 +27,12 @@ const nav = [
       </a>
       <h1 class="l-header__h1">ロゴ</h1>
     </div>
+
     <div class="globalNavWrap">
       <GlobalNav nav={nav} />
+    </div>
+    <div class="hamburgerWrap">
+      <ButtonHamburger />
     </div>
   </div>
 </header>

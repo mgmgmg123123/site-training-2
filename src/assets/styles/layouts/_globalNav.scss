@@ -7,18 +7,22 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 50px;
     @include md {
-      column-gap: 80px;
+      column-gap: 30px;
     }
   }
   .l-globalNav__link {
-    line-height: 1.2;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.1em;
+    display: none;
     @include md {
-      font-size: 18px;
+      display: block;
+      line-height: 1.2;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      color: $color_text;
+      &._current {
+        color: $color_primary;
+      }
     }
     transition: opacity 0.25s;
     @include hover {

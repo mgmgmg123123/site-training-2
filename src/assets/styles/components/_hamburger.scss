@@ -1,0 +1,51 @@
+@charset "utf-8";
+@use "../global" as *;
+.hamburger {
+  width: 60px;
+  height: 60px;
+  background-color: $color_primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include md {
+    display: none;
+  }
+  .hamburger__line {
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $color_white;
+    position: relative;
+    width: 26px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $color_white;
+      width: 100%;
+    }
+    &::before {
+      top: 8px;
+    }
+    &::after {
+      bottom: 8px;
+    }
+  }
+  [aria-expanded="true"] {
+    .hamburger__line {
+      height: 0;
+      &::before,
+      &::after {
+      }
+      &::before {
+      }
+      &::after {
+      }
+    }
+  }
+  @include hover {
+    opacity: 0.5;
+  }
+}
