@@ -1,0 +1,51 @@
+@charset "utf-8";
+@use "../global" as *;
+@use "../global" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+  color: $color_text;
+  overflow-wrap: break-word;
+
+  @include fz(16);
+  @include font_sans;
+  @include line_height(24, 16);
+  @include font_weight_regular;
+
+  //Safari の文字の太さを調節
+  -webkit-font-smoothing: antialiased;
+
+  // 背景固定
+  &._isScrollLock {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  //対象を長押しすることで現れるコールアウト表示
+  -webkit-touch-callout: none;
+}
+@media (hover: hover) {
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid;
+    outline-offset: -2px;
+  }
+}
+:focus-visible {
+  outline: 2px solid;
+}
