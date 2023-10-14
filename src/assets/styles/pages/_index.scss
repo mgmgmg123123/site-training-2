@@ -282,9 +282,8 @@
     @include font_weight_bold;
     line-height: 1.2;
     @include fz(16);
-    font-size: 13px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 7px;
     @include md {
       margin-top: 6px;
       @include fz(18);
@@ -294,7 +293,7 @@
     @include font_weight_medium;
     @include line_height(25, 15);
     @include fz(15);
-    margin-top: 13px;
+    margin-top: 6px;
     @include md {
       @include line_height(23.8, 14);
       @include fz(14);
