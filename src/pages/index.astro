@@ -47,12 +47,12 @@ const meta = {
   <div class="wrapper">
     <section class="news">
       <div class="news__inner">
-        <h2 class="news__title">news</h2>
+        <h2 class="news__title">ニュース</h2>
         <ul class="news__list">
           <li class="news__item">
             <a class="news__link" href="">
               <div class="news__linkInner">
-                <time class="news__datetime" datetime="2030-08-08"
+                <time class="news__datetime" datetime="2030-02-10"
                   >2023.02.10</time
                 >
                 <h3 class="news__heading">
@@ -64,11 +64,11 @@ const meta = {
           <li class="news__item">
             <a class="news__link" href="">
               <div class="news__linkInner">
-                <time class="news__datetime" datetime="2030-08-08"
-                  >2023.02.10</time
+                <time class="news__datetime" datetime="2030-02-08"
+                  >2023.02.08</time
                 >
                 <h3 class="news__heading">
-                  コーポレートサイトをリニューアルしました。
+                  採用を強化中です！一緒に働きませんか？
                 </h3>
               </div>
             </a>
@@ -76,11 +76,11 @@ const meta = {
           <li class="news__item">
             <a class="news__link" href="">
               <div class="news__linkInner">
-                <time class="news__datetime" datetime="2030-08-08"
-                  >2023.02.10</time
+                <time class="news__datetime" datetime="2030-02-02"
+                  >2023.02.02</time
                 >
                 <h3 class="news__heading">
-                  コーポレートサイトをリニューアルしました。
+                  人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
                 </h3>
               </div>
             </a>
@@ -89,98 +89,65 @@ const meta = {
       </div>
     </section>
     <section class="service">
-      <h2 class="service__title">service</h2>
-      <p class="service__subTitle">service</p>
-      <ul class="service__list">
-        <li class="service__item">
-          <a class="service__link" href="">
-            <div class="service__linkInner">
-              <div class="service__imgWrap">
-                <picture>
-                  <source
-                    src="https://placehold.jp/335x172.png"
-                    type="image/webp"
-                  />
-                  <img
-                    class="service__img"
-                    src="https://placehold.jp/335x172.png"
-                    alt="hoge"
-                    width="335"
-                    height="172"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-              <div class="service__textWrap">
-                <h3 class="service__heading">hogehogehoge</h3>
-                <time class="service__datetime" datetime="2030-08-08"
-                  >2030.08.08</time
-                >
-              </div>
+      <div class="service__inner">
+        <h2 class="service__title">サービス</h2>
+        <ul class="service__list">
+          <li class="service__item">
+            <div class="service__imgWrap">
+              <img
+                src="/src/assets/img/icon_work.svg"
+                alt="鞄のアイコン"
+                width="60"
+                height="60"
+                decoding="async"
+                loading="lazy"
+              />
             </div>
-          </a>
-        </li>
-        <li class="service__item">
-          <a class="service__link" href="">
-            <div class="service__linkInner">
-              <div class="service__imgWrap">
-                <picture>
-                  <source
-                    src="https://placehold.jp/335x172.png"
-                    type="image/webp"
-                  />
-                  <img
-                    class="service__img"
-                    src="https://placehold.jp/335x172.png"
-                    alt="hoge"
-                    width="335"
-                    height="172"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-              <div class="service__textWrap">
-                <h3 class="service__heading">hogehogehoge</h3>
-                <time class="service__datetime" datetime="2030-08-05"
-                  >2030.08.05</time
-                >
-              </div>
+            <div class="service__textWrap">
+              <h3 class="service__heading">人材紹介業</h3>
+              <p class="service__text">
+                新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。
+              </p>
             </div>
-          </a>
-        </li>
-        <li class="service__item">
-          <a class="service__link" href="">
-            <div class="service__linkInner">
-              <div class="service__imgWrap">
-                <picture>
-                  <source
-                    src="https://placehold.jp/335x172.png"
-                    type="image/webp"
-                  />
-                  <img
-                    class="service__img"
-                    src="https://placehold.jp/335x172.png"
-                    alt="hogehogehoge"
-                    width="335"
-                    height="172"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-              <div class="service__textWrap">
-                <h3 class="service__heading">hogehogehoge</h3>
-                <time class="service__datetime" datetime="2030-08-02
-								"
-                  >2030.08.02
-                </time>
-              </div>
+          </li>
+          <li class="service__item">
+            <div class="service__imgWrap">
+              <img
+                src="/src/assets/img/icon_building.svg"
+                alt="都会tokaiのアイコン"
+                width="60"
+                height="60"
+                decoding="async"
+                loading="lazy"
+              />
             </div>
-          </a>
-        </li>
-      </ul>
+            <div class="service__textWrap">
+              <h3 class="service__heading">スクール事業</h3>
+              <p class="service__text">
+                オンラインでWeb制作を学べるスクールを運営しています。
+              </p>
+            </div>
+          </li>
+          <li class="service__item">
+            <div class="service__imgWrap">
+              <img
+                src="/src/assets/img/icon_desktop.svg"
+                alt="パソコンのアイコン"
+                width="60"
+                height="60"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div class="service__textWrap">
+              <h3 class="service__heading">Webメディア運営</h3>
+              <p class="service__text">
+                人事系メディアやWebデザイン関連のメディアなどを複数運営しています。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </div>
 </AppLayout>

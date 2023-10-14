@@ -30,6 +30,16 @@
     @content;
   }
 }
+@mixin lg {
+  @media screen and (min-width: variables.$lg) {
+    @content;
+  }
+}
+@mixin under_lg {
+  @media screen and (max-width: variables.$lg) {
+    @content;
+  }
+}
 @mixin line_clamp_single {
   overflow: hidden;
   text-overflow: ellipsis;

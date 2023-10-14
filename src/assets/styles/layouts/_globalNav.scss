@@ -2,23 +2,28 @@
 @use "../global" as *;
 
 .l-globalNav {
+  height: 100%;
   .l-globalNav__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 100%;
+
     @include md {
       column-gap: 30px;
     }
   }
   .l-globalNav__link {
     display: none;
+    height: 100%;
+    width: 100%;
     @include md {
       display: block;
       line-height: 1.2;
       font-weight: 400;
       font-size: 16px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       color: $color_text;
       &._current {
         color: $color_primary;

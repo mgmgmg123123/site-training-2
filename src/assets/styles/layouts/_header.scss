@@ -14,7 +14,7 @@
     padding-left: 20px;
     justify-content: space-between;
     @include md {
-      padding: 20px;
+      padding: 20px 15px;
     }
   }
   .l-header__logo {
@@ -25,11 +25,13 @@
   }
   .l-header__logoLink {
     width: fit-content;
-    display: block;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    height: 100%;
     svg {
       display: block;
-      width: 160px;
+      width: 107px;
       @include md {
         width: 280px;
       }
