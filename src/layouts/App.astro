@@ -1,17 +1,18 @@
 ---
-import Document from "./Document.astro"
-import Footer from "./Footer.astro"
-import Header from "./Header.astro"
+import Document from "./Document.astro";
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
 
-
-const props = Astro.props
+const props = Astro.props;
 ---
 
 <Document {...props}>
   <Header />
   <main id="start-of-content" class="main">
-    
     <slot />
   </main>
   <Footer />
 </Document>
+
+<!-- DOM操作等、クライアント側で実行するものはここで読み込む -->
+<script src="../assets/js/client.ts"></script>

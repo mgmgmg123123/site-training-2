@@ -2,6 +2,12 @@
 @use "../global" as *;
 .l-header {
   height: $header_height_sp;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  background-color: $color_white;
   @include md {
     height: $header_height;
   }

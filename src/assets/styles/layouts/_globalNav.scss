@@ -3,26 +3,65 @@
 
 .l-globalNav {
   height: 100%;
+  position: relative;
+  z-index: 5;
+  @include under_md {
+    &:not(._isActive) {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    opacity: 1;
+    overflow: hidden;
+    transition:
+      transform 0.25s,
+      opacity 0.25s;
+    background-color: $color_primary;
+    width: calc(200 / 375 * 100vw);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .l-globalNav__inner {
+    height: 100%;
+    @include under_md {
+      padding: 80px 40px;
+    }
+    @include md {
+      display: flex;
+      align-items: center;
+    }
+  }
   .l-globalNav__list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-
+    @include under_md {
+      flex-direction: column;
+    }
     @include md {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
       column-gap: 30px;
     }
   }
   .l-globalNav__link {
-    display: none;
+    @include font_weight_regular;
+    @include fz(16);
+    display: block;
     height: 100%;
     width: 100%;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: $color_white;
+    @include under_md {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     @include md {
       display: block;
-      line-height: 1.2;
       font-weight: 400;
-      font-size: 16px;
+      @include fz(16);
       letter-spacing: 0.05em;
       color: $color_text;
       &._current {

@@ -35,11 +35,14 @@
     }
   }
   .kv__inner {
+    margin-top: $header_height_sp;
     height: calc(100vh - $header_height_sp);
     display: flex;
     align-items: center;
     justify-content: center;
     @include md {
+      margin-top: $header_height;
+
       height: calc(100vh - $header_height);
     }
   }
@@ -66,11 +69,13 @@
   }
 }
 .globalNavWrap {
-  display: flex;
-  align-items: center;
-  padding-right: 54px;
+  @include md {
+    padding-right: 54px;
+  }
 }
 .hamburgerWrap {
+  position: relative;
+  z-index: 10;
   @include md {
     display: none;
   }

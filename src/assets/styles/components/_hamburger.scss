@@ -26,23 +26,26 @@
       border-radius: 1px;
       background-color: $color_white;
       width: 100%;
+      transition: transform 0.25s;
     }
     &::before {
-      top: 8px;
+      transform: translateY(8px);
     }
     &::after {
-      bottom: 8px;
+      transform: translateY(-8px);
     }
   }
-  [aria-expanded="true"] {
+  &[aria-expanded="true"] {
     .hamburger__line {
       height: 0;
       &::before,
       &::after {
       }
       &::before {
+        transform: rotate(-45deg) translateX(0px) translateY(0px) scaleX(1.1);
       }
       &::after {
+        transform: rotate(45deg) translateX(0px) translateY(0px) scaleX(1.1);
       }
     }
   }
