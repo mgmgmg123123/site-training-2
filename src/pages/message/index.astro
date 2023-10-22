@@ -1,0 +1,68 @@
+---
+import AppLayout from "../../layouts/App.astro";
+import "@/assets/styles/pages/message/_index.scss";
+import Link from "../../components/Link.astro";
+
+const meta = {
+  title: "ページ名 | サイト名",
+  description: "descriptiondescriptiondescriptiondescriptiondescription",
+  "og:title": "ページ名 | サイト名",
+  "og:description": "descriptiondescriptiondescriptiondescriptiondescription",
+  "og:image": "https://placehold.jp/150x150.png",
+};
+---
+
+<AppLayout {meta}>
+  <div class="kv">
+    <div class="kv__inner">
+      <h1 class="kv__title">メッセージ</h1>
+    </div>
+    <div class="kv__background">
+      <picture>
+        <source
+          srcset="/src/assets/img/pc_bg_mv.webp"
+          type="image/webp"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/src/assets/img/pc_bg_mv.jpg"
+          media="(min-width: 768px)"
+        />
+        <source srcset="/src/assets/img/sp_mv.webp" type="image/webp" />
+        <img
+          src="/src/assets/img/sp_mv.jpg"
+          alt="KV"
+          width="375"
+          height="340"
+          decoding="async"
+          loading="eager"
+        />
+      </picture>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <section class="message">
+      <div class="message__inner">
+        <h2 class="message__title">ニュース</h2>
+        <div>
+          <div>
+            <div class="message__ceo">
+              <picture>
+                <source srcset="/src/assets/img/sp_mv.webp" type="image/webp" />
+                <img
+                  src="/src/assets/img/sp_mv.jpg"
+                  alt="KV"
+                  width="375"
+                  height="340"
+                  decoding="async"
+                  loading="eager"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</AppLayout>
