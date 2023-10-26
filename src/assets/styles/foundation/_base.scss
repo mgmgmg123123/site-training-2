@@ -10,7 +10,9 @@
 *:focus {
   outline: none;
 }
-
+html {
+  height: 100%;
+}
 body {
   overflow-x: hidden;
   color: $color_text;
@@ -31,6 +33,9 @@ body {
     width: 100%;
     height: 100%;
   }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 a {

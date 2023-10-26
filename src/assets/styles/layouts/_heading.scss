@@ -1,0 +1,62 @@
+@charset "utf-8";
+@use "../global" as *;
+.l-heading {
+  position: relative;
+  max-width: 100%;
+  margin-top: $header_height_sp;
+  @include md {
+    margin-top: $header_height;
+  }
+  .l-heading__title {
+    color: $color_white;
+    max-height: 100%;
+    max-width: 100%;
+    @include font_english;
+    .l-heading__titleText {
+      @include font_weight_bold;
+      line-height: 1.2;
+      @include fz(23);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      @include under_md {
+        text-align: center;
+      }
+      @include md {
+        @include fz(40);
+      }
+    }
+  }
+  .l-heading__inner {
+    margin-top: $header_height_sp;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    @include md {
+      margin-top: $header_height;
+      min-height: 190px;
+    }
+  }
+  .l-heading__background {
+    position: absolute;
+    aspect-ratio: 1980/811;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    @include md {
+      aspect-ratio: 1980/811;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      inset: 0;
+    }
+  }
+}

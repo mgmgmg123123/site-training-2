@@ -4,6 +4,11 @@
 .kv {
   position: relative;
   max-width: 100%;
+  margin-top: $header_height_sp;
+  @include md {
+    margin-top: $header_height;
+  }
+
   .kv__title {
     color: $color_white;
     @include font_english;
@@ -35,14 +40,11 @@
     }
   }
   .kv__inner {
-    margin-top: $header_height_sp;
     height: calc(100vh - $header_height_sp);
     display: flex;
     align-items: center;
     justify-content: center;
     @include md {
-      margin-top: $header_height;
-
       height: calc(100vh - $header_height);
     }
   }
