@@ -1,0 +1,23 @@
+---
+type ListItem = {
+  title: string;
+  description: string;
+};
+
+type Props = {
+  item: Array<ListItem>;
+};
+
+const { item, ...props } = Astro.props;
+---
+
+<dl class="c-listDl" {...props}>
+  {
+    item.map(({ title, description }) => (
+      <>
+        <dt class="c-listDl__title">{title}</dt>
+        <dd class="c-listDl__description">{description}</dd>
+      </>
+    ))
+  }
+</dl>

@@ -1,0 +1,117 @@
+@charset "utf-8";
+@use "../../global" as *;
+.company {
+  .company__inner {
+  }
+  .company__title {
+    color: $color_primary;
+    @include font_weight_bold;
+    @include line_height(36, 24);
+    @include fz(24);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    letter-spacing: 0.024em;
+
+    @include md {
+      @include line_height(60, 40);
+      @include fz(40);
+    }
+  }
+  .company__subTitle {
+    @include font_weight_medium;
+    line-height: 1.2;
+    @include fz(15);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-top: 26px;
+    @include md {
+      @include fz(18);
+    }
+  }
+  .company__ceo {
+    width: 100px;
+    aspect-ratio: 1/1;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    @include md {
+      margin-right: 25px;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .company__textWrap {
+    @include line_height(22.5, 15);
+    @include fz(15);
+    letter-spacing: 0.05em;
+    margin-top: 32px;
+    @include md {
+      @include line_height(25.6, 16);
+      @include fz(16);
+      max-width: 795px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+    }
+  }
+  a {
+    color: $color_light_blue;
+    position: relative;
+    text-decoration: none;
+    transition: opacity 0.25s;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+}
+.company__office {
+  width: 100%;
+  aspect-ratio: 335/260;
+  float: none;
+  clear: left;
+  margin-top: 60px;
+  @include md {
+    aspect-ratio: 1110/400;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 85px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+.globalNavWrap {
+  @include md {
+    padding-right: 54px;
+  }
+}
+.hamburgerWrap {
+  position: relative;
+  z-index: 10;
+  @include md {
+    display: none;
+  }
+}
+.wrapper {
+  padding: 23px 20px 50px;
+  @include md {
+    padding: 50px 40px 100px;
+    max-width: calc(1110px + 40px + 40px);
+    margin-inline: auto;
+    overflow-x: hidden;
+  }
+}

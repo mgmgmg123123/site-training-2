@@ -1,0 +1,95 @@
+---
+import AppLayout from "../../layouts/App.astro";
+import "@/assets/styles/pages/company/_index.scss";
+import Heading from "../../components/Heading.astro";
+import ListDl from "../../components/ListDl.astro";
+import ArticleList from "../../components/ArticleList.astro";
+
+const meta = {
+  title: "ページ名 | サイト名",
+  description: "descriptiondescriptiondescriptiondescriptiondescription",
+  "og:title": "ページ名 | サイト名",
+  "og:description": "descriptiondescriptiondescriptiondescriptiondescription",
+  "og:image": "https://placehold.jp/150x150.png",
+};
+const listItem = [
+  {
+    title: "社名",
+    description: "株式会社START",
+  },
+  {
+    title: "設立",
+    description: "2025.02.10",
+  },
+  {
+    title: "代表取締役",
+    description: "ショーン・デイビット・ジュニア",
+  },
+  {
+    title: "資本金",
+    description: "10,000,000円",
+  },
+  {
+    title: "所在地",
+    description: "〒555-5555 東京都千代田区 スタートビルディング 606",
+  },
+];
+const newsList = [
+  {
+    title: "コーポレートサイトをリニューアルしました。",
+    date: "2030-02-10",
+    path: "",
+  },
+  {
+    title: "採用を強化中です！一緒に働きませんか？",
+    date: "2030-02-08",
+    path: "",
+  },
+  {
+    title:
+      "人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！",
+    date: "2030-02-02",
+    path: "",
+  },
+];
+---
+
+<AppLayout {meta}>
+  <Heading text="会社概要" />
+  <div class="wrapper">
+    <section class="company">
+      <div class="company__inner">
+        <ListDl item={listItem} />
+        <div class="company__office">
+          <picture>
+            <source
+              srcset="/src/assets/img/pc_img_office.webp"
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/src/assets/img/pc_img_office.webp"
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/src/assets/img/sp_img_office.webp"
+              type="image/webp"
+            />
+            <img
+              src="/src/assets/img/sp_img_office.jpg"
+              alt="会議室の写真。白いテーブル１つに、赤い椅子が６つある。壁にはホワイトボードがかけられている。"
+              width="335"
+              height="260"
+              decoding="async"
+              loading="eager"
+            />
+          </picture>
+        </div>
+        <div class="news__listWrap">
+          <ArticleList articleList={newsList} />
+        </div>
+      </div>
+    </section>
+  </div>
+</AppLayout>

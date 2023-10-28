@@ -63,5 +63,4 @@ class HamburgerMenu {
 }
 export const hamburgerMenu = () => {
   new HamburgerMenu();
-  console.log("!!");
 };

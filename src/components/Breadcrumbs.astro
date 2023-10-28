@@ -21,9 +21,9 @@ const { breadcrumbs, ...props } = Astro.props;
           {
             // パンクズの最後の要素であれば現在位置となる
             index === breadcrumbs.length - 1 ? (
-              <a href="" aria-current="page" class="c-breadcrumbs__link">
+              <span aria-current="page" class="c-breadcrumbs__link">
                 {name}
-              </a>
+              </span>
             ) : (
               <a href={path} class="c-breadcrumbs__link">
                 {name}

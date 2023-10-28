@@ -1,7 +1,7 @@
 ---
 import AppLayout from "../layouts/App.astro";
 import "@/assets/styles/pages/_index.scss";
-import Link from "../components/Link.astro";
+import ArticleList from "../components/ArticleList.astro";
 
 const meta = {
   title: "ページ名 | サイト名",
@@ -10,6 +10,25 @@ const meta = {
   "og:description": "descriptiondescriptiondescriptiondescriptiondescription",
   "og:image": "https://placehold.jp/150x150.png",
 };
+
+const newsList = [
+  {
+    title: "コーポレートサイトをリニューアルしました。",
+    date: "2030-02-10",
+    path: "",
+  },
+  {
+    title: "採用を強化中です！一緒に働きませんか？",
+    date: "2030-02-08",
+    path: "",
+  },
+  {
+    title:
+      "人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！",
+    date: "2030-02-02",
+    path: "",
+  },
+];
 ---
 
 <AppLayout {meta}>
@@ -48,44 +67,9 @@ const meta = {
     <section class="news">
       <div class="news__inner">
         <h2 class="news__title">ニュース</h2>
-        <ul class="news__list">
-          <li class="news__item">
-            <a class="news__link" href="">
-              <div class="news__linkInner">
-                <time class="news__datetime" datetime="2030-02-10"
-                  >2023.02.10</time
-                >
-                <h3 class="news__heading">
-                  コーポレートサイトをリニューアルしました。
-                </h3>
-              </div>
-            </a>
-          </li>
-          <li class="news__item">
-            <a class="news__link" href="">
-              <div class="news__linkInner">
-                <time class="news__datetime" datetime="2030-02-08"
-                  >2023.02.08</time
-                >
-                <h3 class="news__heading">
-                  採用を強化中です！一緒に働きませんか？
-                </h3>
-              </div>
-            </a>
-          </li>
-          <li class="news__item">
-            <a class="news__link" href="">
-              <div class="news__linkInner">
-                <time class="news__datetime" datetime="2030-02-02"
-                  >2023.02.02</time
-                >
-                <h3 class="news__heading">
-                  人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
-                </h3>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <div class="news__listWrap">
+          <ArticleList articleList={newsList} />
+        </div>
       </div>
     </section>
     <section class="service">
