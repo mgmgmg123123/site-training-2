@@ -4,7 +4,8 @@
 @use "layouts/globalNav";
 @use "layouts/header";
 @use "layouts/heading";
-@use "layouts/articleList";
+@use "components/articleList";
+@use "components/listDl";
 @use "layouts/app";
 @use "components/hamburger";
 @use "components/link";

@@ -12,16 +12,16 @@ type Props = {
 const { articleList, ...props } = Astro.props;
 ---
 
-<ul class="l-articleList">
+<ul class="c-articleList">
   {
     articleList.map(({ title, date, path }) => (
-      <li class="l-articleList__item">
-        <a class="l-articleList__link" href={path}>
-          <div class="l-articleList__linkInner">
-            <time class="l-articleList__dateTime" datetime={date}>
+      <li class="c-articleList__item">
+        <a class="c-articleList__link" href={path}>
+          <div class="c-articleList__linkInner">
+            <time class="c-articleList__dateTime" datetime={date}>
               {date.replaceAll("-", ".")}
             </time>
-            <h3 class="l-articleList__heading">{title}</h3>
+            <h3 class="c-articleList__heading">{title}</h3>
           </div>
         </a>
       </li>

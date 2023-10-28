@@ -1,0 +1,28 @@
+@charset "utf-8";
+@use "../global" as *;
+
+.c-listDl {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  position: relative;
+  .c-listDl__title,
+  .c-listDl__description {
+    @include line_height(21, 14);
+    @include fz(14);
+    padding-bottom: 21px;
+    padding-top: 25px;
+    @include md {
+      padding-bottom: 31px;
+      padding-top: 35px;
+      @include fz(15);
+    }
+  }
+  .c-listDl__title {
+    @include font_weight_bold;
+    border-bottom: 1px solid $color_light_gray;
+  }
+  .c-listDl__description {
+    @include font_weight_medium;
+    border-bottom: 1px solid $color_light_gray;
+  }
+}
