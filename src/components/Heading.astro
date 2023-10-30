@@ -3,7 +3,7 @@ type Props = {
   text: string;
 };
 
-const { text } = Astro.props;
+const { text, ...props } = Astro.props;
 ---
 
 <div class="l-heading">
@@ -14,18 +14,9 @@ const { text } = Astro.props;
   </div>
   <div class="l-heading__background">
     <picture>
-      <source
-        srcset="/src/assets/img/pc_bg_mv.webp"
-        type="image/webp"
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="/src/assets/img/pc_bg_mv.jpg"
-        media="(min-width: 768px)"
-      />
-      <source srcset="/src/assets/img/sp_mv.webp" type="image/webp" />
+      <source srcset="/src/assets/img/pc_bg_mv.webp" type="image/webp" />
       <img
-        src="/src/assets/img/sp_mv.jpg"
+        src="/src/assets/img/pc_bg_mv.jpg"
         alt="l-heading"
         width="375"
         height="340"

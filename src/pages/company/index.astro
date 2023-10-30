@@ -59,32 +59,23 @@ const newsList = [
   <div class="wrapper">
     <section class="company">
       <div class="company__inner">
-        <ListDl item={listItem} />
-        <div class="company__office">
-          <picture>
-            <source
-              srcset="/src/assets/img/pc_img_office.webp"
-              type="image/webp"
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="/src/assets/img/pc_img_office.webp"
-              type="image/webp"
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="/src/assets/img/sp_img_office.webp"
-              type="image/webp"
-            />
-            <img
-              src="/src/assets/img/sp_img_office.jpg"
-              alt="会議室の写真。白いテーブル１つに、赤い椅子が６つある。壁にはホワイトボードがかけられている。"
-              width="335"
-              height="260"
-              decoding="async"
-              loading="eager"
-            />
-          </picture>
+        <div class="company__listDlWrap">
+          <ListDl item={listItem} />
+        </div>
+        <div class="company__mapWrap">
+          <div class="company__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25924.778293210948!2d139.73577960267002!3d35.68691680238676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c0c0b13f54d%3A0xb630953beee48188!2z5p2x5Lqs6YO95Y2D5Luj55Sw5Yy6!5e0!3m2!1sja!2sjp!4v1698624224855!5m2!1sja!2sjp"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a
+            class="company__mapLink"
+            href="https://maps.app.goo.gl/idWdTGuVeodCi5Bg7"
+            target="_blank">Google mapで見る</a
+          >
         </div>
         <div class="news__listWrap">
           <ArticleList articleList={newsList} />

@@ -3,8 +3,11 @@
 
 .c-listDl {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 108px 1fr;
   position: relative;
+  @include md {
+    grid-template-columns: 224px 1fr;
+  }
   .c-listDl__title,
   .c-listDl__description {
     @include line_height(21, 14);
@@ -12,8 +15,7 @@
     padding-bottom: 21px;
     padding-top: 25px;
     @include md {
-      padding-bottom: 31px;
-      padding-top: 35px;
+      padding: 30px;
       @include fz(15);
     }
   }

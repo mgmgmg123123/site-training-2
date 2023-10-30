@@ -19,7 +19,7 @@ const { nav, ...props } = Astro.props;
       {
         nav.map(({ name, path }) => (
           <li class="l-globalNav__item">
-            <a href={path} class="l-globalNav__link">
+            <a href={path} class="l-globalNav__link js-navLink">
               {name}
             </a>
           </li>
@@ -28,3 +28,13 @@ const { nav, ...props } = Astro.props;
     </ul>
   </div>
 </nav>
+
+<script>
+  const links = document.querySelectorAll(".js-navLink");
+  const path = location.pathname;
+  links.forEach((link) => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("_current");
+    }
+  });
+</script>

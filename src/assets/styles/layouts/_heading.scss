@@ -15,8 +15,7 @@
     .l-heading__titleText {
       @include font_weight_bold;
       line-height: 1.2;
-      @include fz(23);
-      text-transform: uppercase;
+      @include fz(28);
       letter-spacing: 0.1em;
       @include under_md {
         text-align: center;
