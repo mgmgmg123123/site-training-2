@@ -2,6 +2,13 @@
 import AppLayout from "../layouts/App.astro";
 import "@/assets/styles/pages/_index.scss";
 import ArticleList from "../components/ArticleList.astro";
+import ImgKvWebpPc from "../assets/img/img_kv_pc.webp";
+import ImgKvWebpSp from "../assets/img/img_kv_sp.webp";
+import ImgKvPc from "../assets/img/img_kv_pc.jpg";
+import ImgKvSp from "../assets/img/img_kv_sp.jpg";
+import IconBuilding from "../assets/img/icon_building.svg";
+import IconWork from "../assets/img/icon_work.svg";
+import IconDesktop from "../assets/img/icon_desktop.svg";
 
 const meta = {
   title: "ページ名 | サイト名",
@@ -42,20 +49,17 @@ const newsList = [
     <div class="kv__background">
       <picture>
         <source
-          srcset="/src/assets/img/pc_bg_mv.webp"
+          srcset={ImgKvWebpPc.src}
           type="image/webp"
           media="(min-width: 768px)"
         />
-        <source
-          srcset="/src/assets/img/pc_bg_mv.jpg"
-          media="(min-width: 768px)"
-        />
-        <source srcset="/src/assets/img/sp_mv.webp" type="image/webp" />
+        <source srcset={ImgKvPc.src} media="(min-width: 768px)" />
+        <source srcset={ImgKvWebpSp.src} type="image/webp" />
         <img
-          src="/src/assets/img/sp_mv.jpg"
+          src={ImgKvSp.src}
           alt="KV"
-          width="375"
-          height="340"
+          width={ImgKvSp.width}
+          height={ImgKvSp.height}
           decoding="async"
           loading="eager"
         />
@@ -79,7 +83,7 @@ const newsList = [
           <li class="service__item">
             <div class="service__imgWrap">
               <img
-                src="/src/assets/img/icon_work.svg"
+                src={IconWork.src}
                 alt="鞄のアイコン"
                 width="60"
                 height="60"
@@ -97,8 +101,8 @@ const newsList = [
           <li class="service__item">
             <div class="service__imgWrap">
               <img
-                src="/src/assets/img/icon_building.svg"
-                alt="都会tokaiのアイコン"
+                src={IconBuilding.src}
+                alt="都会のアイコン"
                 width="60"
                 height="60"
                 decoding="async"
@@ -115,7 +119,7 @@ const newsList = [
           <li class="service__item">
             <div class="service__imgWrap">
               <img
-                src="/src/assets/img/icon_desktop.svg"
+                src={IconDesktop.src}
                 alt="パソコンのアイコン"
                 width="60"
                 height="60"

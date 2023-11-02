@@ -3,6 +3,12 @@ import AppLayout from "../../layouts/App.astro";
 import "@/assets/styles/pages/message/_index.scss";
 import Link from "../../components/Link.astro";
 import Heading from "../../components/Heading.astro";
+import ImgOfficeWebpPc from "../assets/img/img_office_pc.webp";
+import ImgOfficeWebpSp from "../assets/img/img_office_sp.webp";
+import ImgOfficePc from "../assets/img/img_office_pc.jpg";
+import ImgOfficeSp from "../assets/img/img_office_sp.jpg";
+import ImgCeoWebp from "../assets/img/img_ceo.webp";
+import ImgCeo from "../assets/img/img_ceo.jpg";
 
 const meta = {
   title: "ページ名 | サイト名",
@@ -25,9 +31,9 @@ const meta = {
         <div class="message__textWrap">
           <div class="message__ceo">
             <picture>
-              <source srcset="/src/assets/img/img_ceo.webp" type="image/webp" />
+              <source srcset={ImgCeoWebp.src} type="image/webp" />
               <img
-                src="/src/assets/img/img_ceo.jpg"
+                src={ImgCeo.src}
                 alt="ceoが爽やかに微笑む写真"
                 width="100"
                 height="100"
@@ -51,24 +57,21 @@ const meta = {
         <div class="message__office">
           <picture>
             <source
-              srcset="/src/assets/img/pc_img_office.webp"
+              srcset={ImgOfficeWebpPc.src}
               type="image/webp"
               media="(min-width: 768px)"
             />
             <source
-              srcset="/src/assets/img/pc_img_office.webp"
+              srcset={ImgOfficePc.src}
               type="image/webp"
               media="(min-width: 768px)"
             />
-            <source
-              srcset="/src/assets/img/sp_img_office.webp"
-              type="image/webp"
-            />
+            <source srcset={ImgOfficeWebpSp.src} type="image/webp" />
             <img
-              src="/src/assets/img/sp_img_office.jpg"
+              src={ImgOfficeSp.src}
               alt="会議室の写真。白いテーブル１つに、赤い椅子が６つある。壁にはホワイトボードがかけられている。"
-              width="335"
-              height="260"
+              width={ImgOfficeSp.width}
+              height={ImgOfficeSp.height}
               decoding="async"
               loading="eager"
             />
