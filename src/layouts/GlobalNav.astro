@@ -30,11 +30,13 @@ const { nav, ...props } = Astro.props;
 </nav>
 
 <script>
-  const links = document.querySelectorAll(".js-navLink");
-  const path = location.pathname;
-  links.forEach((link) => {
-    if (link.getAttribute("href") === path) {
-      link.classList.add("_current");
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".js-navLink");
+    const path = location.pathname;
+    links.forEach((link) => {
+      if (link.getAttribute("href") === path) {
+        link.classList.add("_current");
+      }
+    });
   });
 </script>
