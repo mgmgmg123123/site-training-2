@@ -1,20 +1,21 @@
 ---
 // import "@/assets/styles/style.scss";
 import Logo from "@/components/Logo.astro";
-import GlobalNav from "../layouts/GlobalNav.astro";
+import GlobalNav from "@/layouts/GlobalNav.astro";
 import ButtonHamburger from "@/components/ButtonHamburger.astro";
+import { getPath } from "@/utils/getPath";
 const nav = [
   {
     name: "ホーム",
-    path: "/",
+    path: getPath.top,
   },
   {
     name: "メッセージ",
-    path: "/message",
+    path: getPath.message,
   },
   {
     name: "企業概要",
-    path: "/company",
+    path: getPath.company,
   },
 ];
 ---

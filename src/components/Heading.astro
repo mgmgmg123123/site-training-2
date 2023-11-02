@@ -1,4 +1,7 @@
 ---
+import ImgKvWebpPc from "@/assets/img/img_kv_pc.webp";
+import ImgKvPc from "@/assets/img/img_kv_pc.jpg";
+
 type Props = {
   text: string;
 };
@@ -14,12 +17,12 @@ const { text, ...props } = Astro.props;
   </div>
   <div class="l-heading__background">
     <picture>
-      <source srcset="/src/assets/img/pc_bg_mv.webp" type="image/webp" />
+      <source srcset={ImgKvWebpPc.src} type="image/webp" />
       <img
-        src="/src/assets/img/pc_bg_mv.jpg"
+        src={ImgKvPc.src}
         alt="l-heading"
-        width="375"
-        height="340"
+        width={ImgKvPc.width}
+        height={ImgKvPc.height}
         decoding="async"
         loading="eager"
       />
