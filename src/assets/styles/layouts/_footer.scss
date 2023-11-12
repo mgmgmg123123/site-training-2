@@ -32,6 +32,8 @@
         line-height: 1.2;
         letter-spacing: 0.05em;
         color: $color_white;
+        transition: opacity 0.25s;
+        @include hover_opacity;
         @include md {
           @include fz(14);
         }

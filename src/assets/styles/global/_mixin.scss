@@ -20,6 +20,13 @@
     }
   }
 }
+@mixin hover_opacity($rate: 0.5) {
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: $rate;
+    }
+  }
+}
 @mixin md {
   @media screen and (min-width: variables.$md) {
     @content;
